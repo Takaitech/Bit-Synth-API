@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+services:
+- mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: bK8ok7ul3vVsSmftc2NDN3bSdaW0uX8ZF3sE2RTn1COsl5oe4lT3dRWcCxeoaqLp3ogom+S8U207UkEDAPrH2pvRH8uzP0qrxN6w5dPJwVy2Ex0e7I3kXNLzK5MqsmbZEZr018LCKXPWyJ10kW8LqSgM4QjQZq+omwhwR5AWsW0gPW2ofDywImvaogXlqwipXgaND9vwzGVQ9jYgDUTCdWiD19BMJ2P7GPXJfxBuKIwqE986lfx5vihLKneZZ8pb2WYoMZ/QFu+8b2/T9st2beisdiDLwvnxXDJwGTv+GC8kQ1sj1MF2r9s2dXpvtpvOh0hnNL8N8CRlZy+p3yQxbsX6KgqfL470XWSxdkSmztmQCMxivUlWfI+Z07+iLiPMjYbjle918gC5B2vqNwYggpL7ORundZkmjTcfFPwOXDnCY0RwfSnY/7MaA2nKSNzXVtT21SsIZ3zQpUAHmPF5ZjXhlKMMCRUHJSohm09dja4VHM7BKp4r9AeS0Px6wvatEr5ZiPbZPr8uTtMcieYYdLiVwHFDj7Gcq93Wis7yl8BRPLu3fhKMHsAS//lbINmOFgqzOm6s+gFT2CE28KvGIqMCAuK1DS96Ge+3MHdMdSriIa2aRdY0u7DH/2eZlsERDqthPMQf2FghUdq3N57YRbO9/EGELiBFBKV47ZlheQI=
+  app: enigmatic-springs-44378
+  on:
+    repo: Takaitech/Bit-Synth-API
