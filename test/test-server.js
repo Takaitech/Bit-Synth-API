@@ -41,11 +41,11 @@ function seedPresetData() {
       },
       portamento: faker.random.number(),
       volume: faker.random.number(),
-      oscillators: [{
+      oscillator: {
         oscillator: faker.random.word(),
         volume: faker.random.number(),
         width: faker.random.number()
-      }]
+      }
 		 });
     }
   return Preset.insertMany(seedData);
@@ -101,7 +101,6 @@ describe('threadPosts API resource', function() {
 
       let newPreset ={
         title: faker.lorem.word(),
-        designer: faker.name.firstName(),
         envelope: {
           attack: faker.random.number(),
           decay: faker.random.number(),
@@ -132,7 +131,7 @@ describe('threadPosts API resource', function() {
           return Preset.findOne();
         })
         .then(preset => {
-          preset.oscillators.should.be.a('array');
+          preset.oscillator.should.be.a('object');
         })
     })
   })

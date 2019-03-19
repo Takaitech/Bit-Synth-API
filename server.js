@@ -7,8 +7,6 @@ const {Preset} = require('./model/models');
 
 mongoose.Promise = global.Promise;
 
-//const {CLIENT_ORIGIN} = require('./config');
-
 
 const {PORT, DATABASE_URL} = require('./config');
 
@@ -22,11 +20,7 @@ app.use(function(err,req,res,next) {
 })
 
 
-/*app.use(
-    cors({
-        origin: CLIENT_ORIGIN
-    })
-); */
+app.use(cors());
 
 //USER PRESETS
 app.get('/presets',function(req,res) {
